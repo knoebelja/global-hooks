@@ -2,13 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import App from "./App";
-import GlobalStoreProvider from "./store";
+import StoreProvider from "./store";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
-  <GlobalStoreProvider>
+  <StoreProvider>
     <App />
-  </GlobalStoreProvider>,
+  </StoreProvider>,
   document.getElementById("root")
 );
 
