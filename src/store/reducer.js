@@ -7,10 +7,10 @@ import * as constants from "./constants";
 
 export const initialState = {
   count: 0,
-  word: "blank",
+  word: "",
   data: {
-    status: "NONE",
-    data: {}
+    status: "N/A",
+    url: "N/A"
   }
 };
 

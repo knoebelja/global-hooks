@@ -1,6 +1,6 @@
 import React from "react";
 
-import useWord from "../../hooks/useWord";
+import useWord from "../hooks/useWord";
 
 const InputWordForm = () => {
   const { word, changeWord } = useWord();

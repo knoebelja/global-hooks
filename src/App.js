@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Navigation from "./components/Navigation";
-import CountPage from "./components/CountPage";
-import WordPage from "./components/WordPage/WordPage";
-import DataPage from "./components/DataPage";
+import CountPage from "./pages/CountPage";
+import WordPage from "./pages/WordPage";
+import DataPage from "./pages/DataPage";
 
 const App = () => {
   return (

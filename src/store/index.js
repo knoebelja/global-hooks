@@ -11,13 +11,14 @@ const DispatchContext = createContext(null);
  * grab and update  state anywhere
  */
 
-export const useStore = (key, action) => {
-  const state = useContext(StateContext)[key];
+export const useStore = (key, changeKeyValue) => {
+  const value = useContext(StateContext)[key];
   const dispatch = useContext(DispatchContext);
-  const setState = value => {
-    return dispatch(action(value));
-  };
-  return [state, setState];
+  function setValue(value) {
+    return dispatch(changeKeyValue(value));
+  }
+  const initialValue = initialState[key];
+  return [value, setValue, initialValue];
 };
 
 /**
@@ -25,7 +26,7 @@ export const useStore = (key, action) => {
  * provides context for state and dispatch
  */
 
-const StoreProvider = ({ children }) => {
+export default function StoreProvider({ children }) {
   const [state, dispatch] = withMiddleware(useReducer(reducer, initialState));
   return (
     <StateContext.Provider value={state}>
@@ -34,6 +35,4 @@ const StoreProvider = ({ children }) => {
       </DispatchContext.Provider>
     </StateContext.Provider>
   );
-};
-
-export default StoreProvider;
+}

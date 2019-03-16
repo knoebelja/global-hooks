@@ -1,6 +1,6 @@
 import React from "react";
 
-import useCount from "../../hooks/useCount";
+import useCount from "../hooks/useCount";
 
 const IncreaseCountButton = () => {
   const { increaseCount } = useCount();
