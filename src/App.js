@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Navigation from "./components/Navigation";
 import CountPage from "./components/CountPage";
-import WordPage from "./components/WordPage";
+import WordPage from "./components/WordPage/WordPage";
 import DataPage from "./components/DataPage";
 
 const App = () => {

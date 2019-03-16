@@ -3,20 +3,18 @@ import { changeCount } from "../store/actions";
 
 const useCount = () => {
   const [count, setCount] = useStore("count", changeCount);
-  const countSetters = {
+  return {
+    count,
     increaseCount: () => {
-      const increasedCount = count + 1;
-      setCount(increasedCount);
+      setCount(count + 1);
     },
     decreaseCount: () => {
-      const decreasedCount = count - 1;
-      setCount(decreasedCount);
+      setCount(count - 1);
     },
     resetCount: () => {
       setCount(0);
     }
   };
-  return [count, countSetters];
 };
 
 export default useCount;

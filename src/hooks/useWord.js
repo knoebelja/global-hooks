@@ -3,7 +3,8 @@ import { changeWord } from "../store/actions";
 
 const useWord = () => {
   const [word, setWord] = useStore("word", changeWord);
-  const wordSetters = {
+  return {
+    word,
     changeWord: newWord => {
       setWord(newWord);
     },
@@ -11,7 +12,6 @@ const useWord = () => {
       setWord("");
     }
   };
-  return [word, wordSetters];
 };
 
 export default useWord;

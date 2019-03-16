@@ -6,7 +6,8 @@ import { initialState } from "../store/reducer";
 
 const useData = () => {
   const [data, setData] = useStore("data", changeData);
-  const dataSetters = {
+  return {
+    data,
     fetchGetRequest: async () => {
       try {
         const res = await axios.get("https://httpbin.org/get");
@@ -27,7 +28,6 @@ const useData = () => {
       setData(initialState.data);
     }
   };
-  return [data, dataSetters];
 };
 
 export default useData;

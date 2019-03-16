@@ -3,7 +3,7 @@ import React, { createContext, useContext, useReducer } from "react";
 import reducer, { initialState } from "./reducer";
 import withMiddleware from "./middleware";
 
-const StateContext = createContext(initialState);
+const StateContext = createContext(null);
 const DispatchContext = createContext(null);
 
 /**

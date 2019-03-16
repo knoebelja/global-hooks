@@ -2,7 +2,7 @@ import * as constants from "./constants";
 
 /**
  * INITIAL STATE
- * of the Global State Provider
+ * of the Store Provider
  */
 
 export const initialState = {
