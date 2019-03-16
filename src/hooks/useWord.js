@@ -1,18 +1,17 @@
-import { useGlobalState, useGlobalDispatch } from "../store";
+import { useStore } from "../store";
 import { changeWord } from "../store/actions";
 
 const useWord = () => {
-  const word = useGlobalState("word");
-  const dispatch = useGlobalDispatch();
-  const wordDispatchers = {
+  const [word, setWord] = useStore("word", changeWord);
+  const wordSetters = {
     changeWord: newWord => {
-      dispatch(changeWord(newWord));
+      setWord(newWord);
     },
     clearWord: () => {
-      dispatch(changeWord(""));
+      setWord("");
     }
   };
-  return [word, wordDispatchers];
+  return [word, wordSetters];
 };
 
 export default useWord;

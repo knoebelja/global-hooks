@@ -1,37 +1,39 @@
 import React, { createContext, useContext, useReducer } from "react";
 
 import reducer, { initialState } from "./reducer";
+import withMiddleware from "./middleware";
 
-const globalStateContext = createContext(initialState);
-const globalDispatchContext = createContext(null);
-
-/**
- * GLOBAL HOOKS
- * grab and update global state anywhere
- */
-
-export const useGlobalState = key => {
-  return useContext(globalStateContext)[key];
-};
-
-export const useGlobalDispatch = () => {
-  return useContext(globalDispatchContext);
-};
+const StateContext = createContext(initialState);
+const DispatchContext = createContext(null);
 
 /**
- * GLOBAL STORE PROVIDER
- * provides global state everywhere
+ * STORE HOOK
+ * grab and update  state anywhere
  */
 
-const GlobalStoreProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+export const useStore = (key, action) => {
+  const state = useContext(StateContext)[key];
+  const dispatch = useContext(DispatchContext);
+  const setState = value => {
+    return dispatch(action(value));
+  };
+  return [state, setState];
+};
+
+/**
+ * STORE PROVIDER
+ * provides context for state and dispatch
+ */
+
+const StoreProvider = ({ children }) => {
+  const [state, dispatch] = withMiddleware(useReducer(reducer, initialState));
   return (
-    <globalStateContext.Provider value={state}>
-      <globalDispatchContext.Provider value={dispatch}>
+    <StateContext.Provider value={state}>
+      <DispatchContext.Provider value={dispatch}>
         {children}
-      </globalDispatchContext.Provider>
-    </globalStateContext.Provider>
+      </DispatchContext.Provider>
+    </StateContext.Provider>
   );
 };
 
-export default GlobalStoreProvider;
+export default StoreProvider;

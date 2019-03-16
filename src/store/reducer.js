@@ -8,7 +8,7 @@ import * as constants from "./constants";
 export const initialState = {
   count: 0,
   word: "blank",
-  response: {
+  data: {
     status: "NONE",
     data: {}
   }
@@ -22,11 +22,11 @@ export const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case constants.CHANGE_COUNT:
-      return { ...state, count: action.count };
+      return { ...state, count: action.payload };
     case constants.CHANGE_WORD:
-      return { ...state, word: action.word };
-    case constants.CHANGE_RESPONSE:
-      return { ...state, response: action.response };
+      return { ...state, word: action.payload };
+    case constants.CHANGE_DATA:
+      return { ...state, data: action.payload };
     default:
       return state;
   }

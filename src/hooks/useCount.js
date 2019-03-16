@@ -1,21 +1,22 @@
-import { useGlobalState, useGlobalDispatch } from "../store";
+import { useStore } from "../store";
 import { changeCount } from "../store/actions";
 
 const useCount = () => {
-  const count = useGlobalState("count");
-  const dispatch = useGlobalDispatch();
-  const dispatchers = {
+  const [count, setCount] = useStore("count", changeCount);
+  const countSetters = {
     increaseCount: () => {
-      dispatch(changeCount(count + 1));
+      const increasedCount = count + 1;
+      setCount(increasedCount);
     },
     decreaseCount: () => {
-      dispatch(changeCount(count - 1));
+      const decreasedCount = count - 1;
+      setCount(decreasedCount);
     },
     resetCount: () => {
-      dispatch(changeCount(0));
+      setCount(0);
     }
   };
-  return [count, dispatchers];
+  return [count, countSetters];
 };
 
 export default useCount;

@@ -1,9 +1,9 @@
 import React from "react";
 
-import useRequest from "../hooks/useRequest";
+import useData from "../hooks/useData";
 
 const DataPage = () => {
-  const [response, requestDispatchers] = useRequest();
+  const [response, requestDispatchers] = useData();
   const { fetchGetRequest, fetchPostRequest, clearData } = requestDispatchers;
   return (
     <div>

@@ -4,14 +4,14 @@ import * as constants from "./constants";
  * ACTIONS
  */
 
-export const changeCount = count => {
-  return { type: constants.CHANGE_COUNT, count };
+export const changeCount = payload => {
+  return { type: constants.CHANGE_COUNT, payload };
 };
 
-export const changeWord = word => {
-  return { type: constants.CHANGE_WORD, word };
+export const changeWord = payload => {
+  return { type: constants.CHANGE_WORD, payload };
 };
 
-export const changeResponse = response => {
-  return { type: constants.CHANGE_RESPONSE, response };
+export const changeData = payload => {
+  return { type: constants.CHANGE_DATA, payload };
 };

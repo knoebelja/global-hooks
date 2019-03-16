@@ -3,8 +3,8 @@ import React from "react";
 import useWord from "../hooks/useWord";
 
 const WordPage = () => {
-  const [word, wordActions] = useWord();
-  const { changeWord, clearWord } = wordActions;
+  const [word, wordDispatchers] = useWord();
+  const { changeWord, clearWord } = wordDispatchers;
   const handleChange = e => {
     changeWord(e.target.value);
   };
