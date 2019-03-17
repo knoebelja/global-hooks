@@ -1,8 +1,7 @@
 import { useStore } from "../store";
-import { changeCount } from "../store/actions";
 
 const useCount = () => {
-  const [count, setCount] = useStore("count", changeCount);
+  const [count, setCount] = useStore("count");
   return {
     count,
     increaseCount: () => {

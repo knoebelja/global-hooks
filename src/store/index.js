@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useReducer } from "react";
 
+import * as actions from "./actions";
 import reducer, { initialState } from "./reducer";
 import withMiddleware from "./middleware";
 
@@ -11,14 +12,13 @@ const DispatchContext = createContext(null);
  * grab and update  state anywhere
  */
 
-export const useStore = (key, changeKeyValue) => {
+export const useStore = key => {
   const value = useContext(StateContext)[key];
   const dispatch = useContext(DispatchContext);
   function setValue(value) {
-    return dispatch(changeKeyValue(value));
+    return dispatch(actions[key](value));
   }
-  const initialValue = initialState[key];
-  return [value, setValue, initialValue];
+  return [value, setValue];
 };
 
 /**

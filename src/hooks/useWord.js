@@ -1,8 +1,7 @@
 import { useStore } from "../store";
-import { changeWord } from "../store/actions";
 
 const useWord = () => {
-  const [word, setWord] = useStore("word", changeWord);
+  const [word, setWord] = useStore("word");
   return {
     word,
     changeWord: newWord => {

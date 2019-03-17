@@ -2,7 +2,7 @@ import React from "react";
 
 import useCount from "../hooks/useCount";
 import IncreaseCountButton from "../components/IncreaseCountButton";
-import DecreaseCountButton from "../components/CountPage/DecreaseCountButton";
+import DecreaseCountButton from "../components/DecreaseCountButton";
 import ResetCountButton from "../components/ResetCountButton";
 
 const CountPage = () => {
