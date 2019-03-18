@@ -22,11 +22,11 @@ Each hook returns an object representing a stored value. The object contains the
 
 #### `pages`
 
-The content of each page.
+Pages are functional representations of one route's content.
 
 #### `components`
 
-The building blocks of each page.
+Components are functional representations of each HTML element rendered by the browser.
 
 ## Scripts
 
