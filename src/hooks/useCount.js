@@ -2,8 +2,7 @@ import { useStore } from "../store";
 
 const useCount = () => {
   const [count, setCount] = useStore("count");
-  return {
-    count,
+  const countMethods = {
     increaseCount: () => {
       setCount(count + 1);
     },
@@ -14,6 +13,7 @@ const useCount = () => {
       setCount(0);
     }
   };
+  return { count, ...countMethods };
 };
 
 export default useCount;

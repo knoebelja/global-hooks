@@ -2,15 +2,13 @@ import { useStore } from "../store";
 
 const useWord = () => {
   const [word, setWord] = useStore("word");
-  return {
-    word,
-    changeWord: newWord => {
-      setWord(newWord);
-    },
+  const wordMethods = {
+    setWord,
     clearWord: () => {
       setWord("");
     }
   };
+  return { word, ...wordMethods };
 };
 
 export default useWord;

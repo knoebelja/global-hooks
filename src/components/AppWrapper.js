@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const PageWrapper = ({ children }) => {
+const AppWrapper = ({ children }) => {
   return (
     <div>
       <div>
@@ -14,4 +14,4 @@ const PageWrapper = ({ children }) => {
   );
 };
 
-export default PageWrapper;
+export default AppWrapper;

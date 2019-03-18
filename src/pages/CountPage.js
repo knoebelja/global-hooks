@@ -1,18 +1,18 @@
 import React from "react";
 
 import useCount from "../hooks/useCount";
-import IncreaseCountButton from "../components/IncreaseCountButton";
-import DecreaseCountButton from "../components/DecreaseCountButton";
-import ResetCountButton from "../components/ResetCountButton";
+import CountIncreaseButton from "../components/CountIncreaseButton";
+import CountDecreaseButton from "../components/CountDecreaseButton";
+import CountResetButton from "../components/CountResetButton";
 
 const CountPage = () => {
   const { count } = useCount();
   return (
     <div>
       <p>Nothing to count here: {count}</p>
-      <IncreaseCountButton />
-      <DecreaseCountButton />
-      <ResetCountButton />
+      <CountIncreaseButton />
+      <CountDecreaseButton />
+      <CountResetButton />
     </div>
   );
 };

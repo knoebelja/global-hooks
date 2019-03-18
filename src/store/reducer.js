@@ -21,11 +21,11 @@ export const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case constants.CHANGE_COUNT:
+    case constants.SET_COUNT:
       return { ...state, count: action.payload };
-    case constants.CHANGE_WORD:
+    case constants.SET_WORD:
       return { ...state, word: action.payload };
-    case constants.CHANGE_DATA:
+    case constants.SET_DATA:
       return { ...state, data: action.payload };
     default:
       return state;

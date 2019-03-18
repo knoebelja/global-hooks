@@ -1,16 +1,16 @@
 import React from "react";
 
 import useWord from "../hooks/useWord";
-import InputWordForm from "../components/InputWordForm";
-import ClearWordButton from "../components/ClearWordButton";
+import WordInputForm from "../components/WordInputForm";
+import WordClearButton from "../components/WordClearButton";
 
 const WordPage = () => {
   const { word } = useWord();
   return (
     <div>
       <p>Length of Word: {word.length}</p>
-      <InputWordForm />
-      <ClearWordButton />
+      <WordInputForm />
+      <WordClearButton />
     </div>
   );
 };

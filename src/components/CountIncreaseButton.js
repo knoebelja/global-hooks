@@ -2,9 +2,9 @@ import React from "react";
 
 import useCount from "../hooks/useCount";
 
-const IncreaseCountButton = () => {
+const CountIncreaseButton = () => {
   const { increaseCount } = useCount();
   return <button onClick={increaseCount}>Increase Count</button>;
 };
 
-export default IncreaseCountButton;
+export default CountIncreaseButton;

@@ -2,10 +2,10 @@ import React from "react";
 
 import useWord from "../hooks/useWord";
 
-const InputWordForm = () => {
-  const { word, changeWord } = useWord();
+const WordInputButton = () => {
+  const { word, setWord } = useWord();
   const handleChange = e => {
-    changeWord(e.target.value);
+    setWord(e.target.value);
   };
   return (
     <form>
@@ -15,4 +15,4 @@ const InputWordForm = () => {
   );
 };
 
-export default InputWordForm;
+export default WordInputButton;

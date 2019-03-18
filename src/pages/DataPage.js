@@ -1,9 +1,9 @@
 import React from "react";
 
 import useData from "../hooks/useData";
-import GetRequestButton from "../components/GetRequestButton";
-import PostRequestButton from "../components/PostRequestButton";
-import ClearResponseButton from "../components/ClearResponseButton";
+import DataGetButton from "../components/DataGetButton";
+import DataPostButton from "../components/DataPostButton";
+import DataClearButton from "../components/DataClearButton";
 
 const DataPage = () => {
   const { data } = useData();
@@ -11,9 +11,9 @@ const DataPage = () => {
     <div>
       <p>Status: {data.status}</p>
       <p>Url: {data.url}</p>
-      <GetRequestButton />
-      <PostRequestButton />
-      <ClearResponseButton />
+      <DataGetButton />
+      <DataPostButton />
+      <DataClearButton />
     </div>
   );
 };

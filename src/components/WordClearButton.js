@@ -2,9 +2,9 @@ import React from "react";
 
 import useWord from "../hooks/useWord";
 
-const ClearWordButton = () => {
+const WordClearButton = () => {
   const { clearWord } = useWord();
   return <button onClick={clearWord}>Clear Word</button>;
 };
 
-export default ClearWordButton;
+export default WordClearButton;

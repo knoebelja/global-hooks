@@ -5,13 +5,13 @@ import * as constants from "./constants";
  */
 
 export const count = payload => {
-  return { type: constants.CHANGE_COUNT, payload };
+  return { type: constants.SET_COUNT, payload };
 };
 
 export const word = payload => {
-  return { type: constants.CHANGE_WORD, payload };
+  return { type: constants.SET_WORD, payload };
 };
 
 export const data = payload => {
-  return { type: constants.CHANGE_DATA, payload };
+  return { type: constants.SET_DATA, payload };
 };
