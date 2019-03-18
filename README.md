@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It uses React Hooks to implement a global store.
 
+## Scripts
+
+In the project directory, you can run:
+
+- `npm start` runs the app in development mode on [3000](http://localhost:3000).
+- `npm test` launches the test runner. There are currently no tests.
+- `npm run build` builds the app for production to the `build` folder.
+
 ## Architecture
 
 ### `src`
@@ -27,11 +35,3 @@ Pages are functional representations of one route's content.
 #### `components`
 
 Components are functional representations of each HTML element rendered by the browser.
-
-## Scripts
-
-In the project directory, you can run:
-
-- `npm start` runs the app in development mode on [3000](http://localhost:3000).
-- `npm test` launches the test runner. There are currently no tests.
-- `npm run build` builds the app for production to the `build` folder.
