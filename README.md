@@ -4,23 +4,27 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Architecture
 
-### App
+### `src`
 
-Provides route paths and application layout.
+The entry point of the application.
 
-### Store
+#### `App.js`
 
-Provides a `useStore` function and a `StoreProvider` component. `StoreProvider` wraps the entire application, providing `useStore` the context to update the `initialState`.
+The component that provides a layout and navigation to the application.
 
-### Hooks
+#### `store`
 
-Each hook returns an object for a different store item. The object contains the state of the store item and helper methods for updating that item's state.
+The store provides global state to the application. `StoreProvider` wraps the entire application, and `useStore` updates the provided key value of `initialState`.
 
-### Pages
+#### `hooks`
+
+Each hook returns an object representing a stored value. The object contains the state of the store item and helper methods for updating state.
+
+#### `pages`
 
 The content of each page.
 
-### Components
+#### `components`
 
 The building blocks of each page.
 
