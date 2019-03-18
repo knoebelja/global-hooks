@@ -16,22 +16,10 @@ In the project directory, you can run:
 
 The entry point of the application.
 
-#### `App.js`
-
-The component that provides a layout and navigation to the application.
-
-#### `store`
-
-The store provides global state to the application. `StoreProvider` wraps the entire application, and `useStore` updates the provided key value of `initialState`.
-
-#### `hooks`
-
-Each hook returns an object representing a stored value. The object contains the state of the store item and helper methods for updating state.
-
-#### `pages`
-
-Pages are functional representations of one route's content.
-
-#### `components`
-
-Components are functional representations of each HTML element rendered by the browser.
+| file / directory | description |
+| ---------------- | ----------- |
+| `App.js` | The component that provides a layout and navigation to the application. |
+| `store` | The store provides global state to the application. `StoreProvider` wraps the entire application, and `useStore` updates the provided key value of `initialState`. |
+| `hooks` | Each hook returns an object representing a stored value. The object contains the state of the store item and helper methods for updating state. |
+| `pages` | Pages are functional representations of one route's content. |
+| `components` | Components are functional representations of each HTML element rendered by the browser. |
