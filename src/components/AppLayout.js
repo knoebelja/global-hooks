@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const AppWrapper = ({ children }) => {
+const AppLayout = ({ children }) => {
   return (
     <div>
       <div>
@@ -14,4 +14,4 @@ const AppWrapper = ({ children }) => {
   );
 };
 
-export default AppWrapper;
+export default AppLayout;

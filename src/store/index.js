@@ -26,7 +26,7 @@ export const useStore = key => {
  * provides context for state and dispatch
  */
 
-export default function StoreProvider({ children }) {
+export default function GlobalStoreProvider({ children }) {
   const [state, dispatch] = withMiddleware(useReducer(reducer, initialState));
   return (
     <StateContext.Provider value={state}>

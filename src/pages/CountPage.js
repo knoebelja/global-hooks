@@ -9,7 +9,7 @@ const CountPage = () => {
   const { count } = useCount();
   return (
     <div>
-      <p>Nothing to count here: {count}</p>
+      <p>Count: {count}</p>
       <CountIncreaseButton />
       <CountDecreaseButton />
       <CountResetButton />

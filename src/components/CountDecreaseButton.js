@@ -1,9 +1,9 @@
 import React from "react";
 
-import useCount from "../hooks/useCount";
+import funCount from "../hooks/useCount";
 
 const CountDecreaseButton = () => {
-  const { decreaseCount } = useCount();
+  const { decreaseCount } = funCount();
   return <button onClick={decreaseCount}>Decrease Count</button>;
 };
 

@@ -9,7 +9,7 @@ const WordInputButton = () => {
   };
   return (
     <form>
-      <label>Word:</label>
+      <label>Word</label>
       <input type="text" value={word} onChange={handleChange} />
     </form>
   );
