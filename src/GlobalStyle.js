@@ -47,7 +47,7 @@ const GlobalStyle = createGlobalStyle`
       outline: none;
     }
     &:active {
-      color: white;
+      color: grey;
       background-color: grey;
       border: 2px solid white;
     }

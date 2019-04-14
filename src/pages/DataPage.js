@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
-import useData from "../hooks/useData";
-import DataGetButton from "../components/DataGetButton";
-import DataPostButton from "../components/DataPostButton";
-import DataClearButton from "../components/DataClearButton";
+import Button from "../components/Button";
+import makeFetcher from "../util/fetch";
+import { initialState } from "../store/reducer";
+import { useStore } from "../store";
 
 const DataPage = () => {
-  const { data } = useData();
+  const [data, setData] = useStore("data");
+  const get = makeFetcher("get", setData);
+  const post = makeFetcher("post", setData);
+  const clearData = () => {
+    setData(initialState.data);
+  };
   return (
     <div>
       <p>Status: {data.status}</p>
       <p>Url: {data.url}</p>
-      <DataGetButton />
-      <DataPostButton />
-      <DataClearButton />
+      <Button label="GET Request" onClick={get} />
+      <Button label="POST Request" onClick={post} />
+      <Button label="Clear Response" onClick={clearData} />
     </div>
   );
 };
