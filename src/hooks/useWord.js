@@ -1,14 +1,13 @@
-import { useStore } from "../store";
+import { useState } from "react";
 
 const useWord = () => {
-  const [word, setWord] = useStore("word");
-  const wordMethods = {
-    setWord,
-    clearWord: () => {
-      setWord("");
-    }
-  };
-  return { word, ...wordMethods };
+    const [word, setWord] = useState("");
+
+    const clearWord = () => {
+        setWord("");
+    };
+
+    return { word, setWord, clearWord };
 };
 
 export default useWord;
